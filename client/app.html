@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banglore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="https://images.pexels.com/photos/2999012/pexels-photo-2999012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+			  </div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+		  </div>
+	</div>
+	<div class="container">
+      <div class="img"></div>
+		<form class="form">
+			
+				<h2>Area (Square Feet)</h2>
+				<input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+				<h2>BHK</h2>
+				<div class="switch-field">
+					<input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+					<label for="radio-bhk-1">1</label>
+					<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+					<label for="radio-bhk-2">2</label>
+					<input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+					<label for="radio-bhk-3">3</label>
+					<input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+					<label for="radio-bhk-4">4</label>
+					<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+					<label for="radio-bhk-5">5</label>
+				</div>
+		</form>
+		<form class="form">
+				<h2>Bath</h2>
+				<div class="switch-field">
+					<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+					<label for="radio-bath-1">1</label>
+					<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+					<label for="radio-bath-2">2</label>
+					<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+					<label for="radio-bath-3">3</label>
+					<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+					<label for="radio-bath-4">4</label>
+					<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+					<label for="radio-bath-5">5</label>
+				</div>
+				<h2>Balcony</h2>
+				<div class="switch-field">
+					<input type="radio" id="radio-balcony-1" name="uiBalcony" value="1"/>
+					<label for="radio-balcony-1">0</label>
+					<input type="radio" id="radio-balcony-2" name="uiBalcony" value="2" checked/>
+					<label for="radio-balcony-2">1</label>
+					<input type="radio" id="radio-balcony-3" name="uiBalcony" value="3"/>
+					<label for="radio-balcony-3">2</label>
+					<input type="radio" id="radio-balcony-4" name="uiBalcony" value="4"/>
+					<label for="radio-balcony-4">3</label>
+					<input type="radio" id="radio-balcony-5" name="uiBalcony" value="5"/>
+					<label for="radio-balcony-5">4</label>
+				</div>
+			
+						<h2>Location</h2>
+					<div>
+				<select class="location" name="" id="uiLocations">
+					<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+						<option>Electronic City</option>
+						<option>Rajaji Nagar</option>
+				</select>
+				</div>
+					<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+					<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+			</form>
+	</div>
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
